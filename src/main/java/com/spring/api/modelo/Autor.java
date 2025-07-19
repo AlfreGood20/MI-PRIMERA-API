@@ -9,14 +9,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.List;
+
+
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Data
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -29,8 +32,11 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
+    @NotBlank(message = "Este campo es obligatorio.")
     @Column(nullable = false, unique = true)
     private String nombre;
+
+    @NotBlank(message = "Ingresar nacionalidad (MX,FR,USA ETC).")
     private String nacionalidad;
     
     @OneToMany(mappedBy = "autor")
