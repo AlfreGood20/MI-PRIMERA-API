@@ -104,3 +104,10 @@ public ResponseEntity<?> guardar(@Valid  @RequestBody UserDTO obj){
 | 502    | Bad Gateway                |                 | Respuesta inválida de un servidor upstream.                                |
 | 503    | Service Unavailable        |                 | Servicio no disponible (generalmente por mantenimiento).                   |
 | 504    | Gateway Timeout            |                 | Tiempo de espera agotado entre servidores.                                 |
+
+## COMO USAR ESTA API
+- Configurar base de datos mysql y agregar variable de entorno (username,password,url) configurarlo desde tu IDE
+- Clonar este repositorio
+  ```git
+  git clone https://github.com/AlfreGood20/MI-PRIMERA-REST-API-CON-SPRING-BOOT
+  ```
